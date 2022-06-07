@@ -93,7 +93,6 @@ class Circuit:
         else:
             self.has_inputs = False
         self.split = split
-        # TODO(@refraction-ray): split settings at global level?
         if (inputs is None) and (mps_inputs is None):
             nodes = [
                 tn.Node(
@@ -118,7 +117,9 @@ class Circuit:
             nodes = [inputs]
             self._front = [inputs.get_edge(i) for i in range(n)]
         else:  # mps_inputs is not None
-            mps_nodes = mps_inputs.nodes  # type: ignore
+            mps_nodes = list(mps_inputs.nodes)  # type: ignore
+            for i, n in enumerate(mps_nodes):
+                mps_nodes[i].tensor = backend.cast(n.tensor, dtypestr)  # type: ignore
             mps_edges = mps_inputs.out_edges + mps_inputs.in_edges  # type: ignore
             ndict, edict = tn.copy(mps_nodes)
             new_nodes = []
@@ -1720,7 +1721,7 @@ def expectation(
     >>> tc.expectation(*x1x2, ket=s3, bra=s2)
     (0.7071067690849304+0j) # 1/sqrt(2)
 
-    :param ket: :math:`ket`.
+    :param ket: :math:`ket`. The state in tensor or ``QuVector`` format
     :type ket: Tensor
     :param bra: :math:`bra`, defaults to None, which is the same as ``ket``.
     :type bra: Optional[Tensor], optional
@@ -1732,7 +1733,6 @@ def expectation(
     :return: The result of :math:`\\langle bra\\vert ops \\vert ket\\rangle`.
     :rtype: Tensor
     """
-    # TODO: incomplete docstring
     if bra is None:
         bra = ket
     if isinstance(ket, QuOperator):
