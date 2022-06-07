@@ -1,0 +1,239 @@
+@ circuit, nr_q, nr_gates, basic_greedy, contegra1, contegra2, opteinsum
+
+Adder128_after_heavy > 16Q
+Adder16_after_heavy > 16Q
+Adder16_after_light > 16Q
+Adder16_before > 16Q
+Adder16_pyzx.qc > 16Q
+Adder32_after_heavy > 16Q
+Adder32_after_light > 16Q
+Adder32_before > 16Q
+Adder32_pyzx.qc > 16Q
+Adder64_after_heavy > 16Q
+Adder64_after_light > 16Q
+Adder64_before > 16Q
+Adder64_pyzx.qc > 16Q
+Adder8_after_heavy > 16Q
+Adder8_after_light > 16Q
+Adder8_before > 16Q
+Adder8_pyzx.qc > 16Q
+some problem with  adder_8.qc
+adder_8_after_heavy > 16Q
+some problem with  adder_8_after_light
+adder_8_before > 16Q
+adder_8_pyzx.qc > 16Q
+adder_8_tpar.qc > 16Q
+some problem with  barenco_tof_10.qc
+barenco_tof_10_after_heavy > 16Q
+barenco_tof_10_after_light > 16Q
+barenco_tof_10_before > 16Q
+barenco_tof_10_pyzx.qc > 16Q
+barenco_tof_10_tpar.qc > 16Q
+some problem with  barenco_tof_3.qc
+@ barenco_tof_3_after_heavy, 5, 40, 0.021594976999040227, -1, -1, 0.7342569020001974 
+@ barenco_tof_3_after_light, 5, 42, 0.023468593000870897, -1, -1, 0.10244564900131081 
+some problem with  barenco_tof_3_before
+@ barenco_tof_3_pyzx.qc, 5, 50, 0.022557337000762345, -1, -1, 0.3480717030033702 
+@ barenco_tof_3_tpar.qc, 5, 82, 0.029162488997826586, -1, -1, 0.21449551800105837 
+some problem with  barenco_tof_4.qc
+@ barenco_tof_4_after_heavy, 7, 72, 0.027423490999353817, -1, -1, 0.1783839519994217 
+@ barenco_tof_4_after_light, 7, 78, 0.02455849699981627, -1, -1, 0.17804092599908472 
+some problem with  barenco_tof_4_before
+@ barenco_tof_4_pyzx.qc, 7, 95, 0.02627082400067593, -1, -1, 0.20991693700125325 
+@ barenco_tof_4_tpar.qc, 7, 141, 0.03584328199940501, -1, -1, 0.3423381899992819 
+some problem with  barenco_tof_5.qc
+some problem with  barenco_tof_5_after_heavy
+some problem with  barenco_tof_5_after_light
+some problem with  barenco_tof_5_before
+some problem with  barenco_tof_5_pyzx.qc
+some problem with  barenco_tof_5_tpar.qc
+some problem with  csla_mux_3.qc
+some problem with  csla_mux_3_original_after_heavy
+some problem with  csla_mux_3_original_after_light
+some problem with  csla_mux_3_original_before
+some problem with  csla_mux_3_original_pyzx.qc
+some problem with  csla_mux_3_tpar.qc
+csum_mux_9.qc > 16Q
+csum_mux_9_corrected_after_heavy > 16Q
+csum_mux_9_corrected_after_light > 16Q
+csum_mux_9_corrected_before > 16Q
+csum_mux_9_corrected_pyzx.qc > 16Q
+csum_mux_9_tpar.qc > 16Q
+some problem with  cycle_17_3.qc
+gf2^10_mult.qc > 16Q
+gf2^10_mult_after_heavy > 16Q
+gf2^10_mult_after_light > 16Q
+gf2^10_mult_before > 16Q
+gf2^10_mult_pyzx.qc > 16Q
+gf2^10_mult_tpar.qc > 16Q
+gf2^128_mult.qc > 16Q
+gf2^16_mult.qc > 16Q
+gf2^16_mult_after_heavy > 16Q
+gf2^16_mult_after_light > 16Q
+gf2^16_mult_before > 16Q
+gf2^16_mult_pyzx.qc > 16Q
+gf2^16_mult_tpar.qc > 16Q
+gf2^256_mult.qc > 16Q
+gf2^32_mult.qc > 16Q
+gf2^32_mult_tpar.qc > 16Q
+some problem with  gf2^4_mult.qc
+some problem with  gf2^4_mult_after_heavy
+some problem with  gf2^4_mult_after_light
+some problem with  gf2^4_mult_before
+some problem with  gf2^4_mult_pyzx.qc
+some problem with  gf2^4_mult_tpar.qc
+some problem with  gf2^5_mult.qc
+some problem with  gf2^5_mult_after_heavy
+some problem with  gf2^5_mult_after_light
+some problem with  gf2^5_mult_before
+some problem with  gf2^5_mult_pyzx.qc
+some problem with  gf2^5_mult_tpar.qc
+gf2^64_mult.qc > 16Q
+gf2^6_mult.qc > 16Q
+gf2^6_mult_after_heavy > 16Q
+gf2^6_mult_after_light > 16Q
+gf2^6_mult_before > 16Q
+gf2^6_mult_pyzx.qc > 16Q
+gf2^6_mult_tpar.qc > 16Q
+gf2^7_mult.qc > 16Q
+gf2^7_mult_after_heavy > 16Q
+gf2^7_mult_after_light > 16Q
+gf2^7_mult_before > 16Q
+gf2^7_mult_pyzx.qc > 16Q
+gf2^7_mult_tpar.qc > 16Q
+gf2^8_mult.qc > 16Q
+gf2^8_mult_after_heavy > 16Q
+gf2^8_mult_after_heavy - Copy > 16Q
+gf2^8_mult_after_light > 16Q
+gf2^8_mult_before > 16Q
+gf2^8_mult_pyzx.qc > 16Q
+gf2^8_mult_pyzxtodd.qc > 16Q
+gf2^8_mult_tpar.qc > 16Q
+gf2^9_mult.qc > 16Q
+gf2^9_mult_after_heavy > 16Q
+gf2^9_mult_after_light > 16Q
+gf2^9_mult_before > 16Q
+gf2^9_mult_pyzx.qc > 16Q
+gf2^9_mult_tpar.qc > 16Q
+some problem with  grover_5.qc
+some problem with  grover_5_pyzx.qc
+some problem with  grover_5_tpar.qc
+some problem with  ham15-high.qc
+ham15-high_pyzx.qc > 16Q
+some problem with  ham15-low.qc
+ham15-low_pyzx.qc > 16Q
+some problem with  ham15-med.qc
+ham15-med_pyzx.qc > 16Q
+some problem with  hwb10.qc
+some problem with  hwb11.qc
+hwb12.qc > 16Q
+some problem with  hwb6.qc
+some problem with  hwb6_pyzx.qc
+some problem with  hwb8.qc
+some problem with  hwb8_pyzx.qc
+some problem with  mod5_4.qc
+@ mod5_4_after_heavy, 5, 51, 0.05320288400253048, -1, -1, 0.3071684059977997 
+@ mod5_4_after_light, 5, 51, 0.026672083000448765, -1, -1, 0.12053764300071634 
+some problem with  mod5_4_before
+@ mod5_4_pyzx.qc, 5, 46, 0.021039141996880062, -1, -1, 0.09926612500203191 
+@ mod5_4_tpar.qc, 5, 77, 0.029902695001510438, -1, -1, 0.1854940279990842 
+some problem with  mod_adder_1024.qc
+mod_adder_1024_after_heavy > 16Q
+mod_adder_1024_after_light > 16Q
+mod_adder_1024_before > 16Q
+mod_adder_1024_pyzx.qc > 16Q
+mod_adder_1024_tpar.qc > 16Q
+mod_adder_1048576.qc > 16Q
+mod_adder_1048576_tpar.qc > 16Q
+some problem with  mod_mult_55.qc
+some problem with  mod_mult_55_after_heavy
+some problem with  mod_mult_55_after_light
+some problem with  mod_mult_55_before
+some problem with  mod_mult_55_pyzx.qc
+some problem with  mod_mult_55_tpar.qc
+some problem with  mod_red_21.qc
+some problem with  mod_red_21_after_heavy
+some problem with  mod_red_21_after_light
+some problem with  mod_red_21_before
+some problem with  mod_red_21_pyzx.qc
+some problem with  mod_red_21_tpar.qc
+some problem with  nth_prime6.tfc
+some problem with  nth_prime6_pyzx.qc
+some problem with  nth_prime8_pyzx.qc
+some problem with  qcla_adder_10.qc
+qcla_adder_10_after_heavy > 16Q
+qcla_adder_10_after_light > 16Q
+qcla_adder_10_before > 16Q
+qcla_adder_10_pyzx.qc > 16Q
+qcla_adder_10_tpar.qc > 16Q
+some problem with  qcla_com_7.qc
+qcla_com_7_after_heavy > 16Q
+qcla_com_7_after_light > 16Q
+qcla_com_7_before > 16Q
+qcla_com_7_pyzx.qc > 16Q
+qcla_com_7_tpar.qc > 16Q
+some problem with  qcla_mod_7.qc
+qcla_mod_7_after_heavy > 16Q
+qcla_mod_7_after_light > 16Q
+qcla_mod_7_before > 16Q
+qcla_mod_7_pyzx.qc > 16Q
+qcla_mod_7_tpar.qc > 16Q
+some problem with  QFT16_after
+some problem with  QFT16_before
+some problem with  QFT16_pyzx.qc
+QFT32_after > 16Q
+QFT32_before > 16Q
+some problem with  QFT32_pyzx.qc
+QFT64_after > 16Q
+@ QFT8_after, 8, 106, 0.047848939000687096, -1, -1, 0.4527855020023708 
+some problem with  QFT8_before
+some problem with  QFT8_pyzx.qc
+QFTAdd16_after > 16Q
+QFTAdd16_before > 16Q
+some problem with  QFTAdd16_pyzx.qc
+QFTAdd32_after > 16Q
+QFTAdd32_before > 16Q
+some problem with  QFTAdd32_pyzx.qc
+QFTAdd64_after > 16Q
+some problem with  QFTAdd8_after
+some problem with  QFTAdd8_before
+some problem with  QFTAdd8_pyzx.qc
+some problem with  qft_4.qc
+some problem with  qft_4_pyzx.qc
+some problem with  rc_adder_6.qc
+some problem with  rc_adder_6_after_heavy
+some problem with  rc_adder_6_after_light
+some problem with  rc_adder_6_before
+some problem with  rc_adder_6_pyzx.qc
+some problem with  rc_adder_6_tpar.qc
+some problem with  shor_2_21.qc
+some problem with  tof_10.qc
+tof_10_after_heavy > 16Q
+tof_10_after_light > 16Q
+tof_10_before > 16Q
+tof_10_pyzx.qc > 16Q
+tof_10_tpar.qc > 16Q
+some problem with  tof_3.qc
+@ tof_3_after_heavy, 5, 35, 0.0459712550000404, -1, -1, 0.21601045799980056 
+@ tof_3_after_light, 5, 35, 0.04032557100072154, -1, -1, 0.18536553300145897 
+some problem with  tof_3_before
+@ tof_3_pyzx.qc, 5, 40, 0.048961857002723264, -1, -1, 0.1812606470011815 
+@ tof_3_tpar.qc, 5, 59, 0.047952846998668974, -1, -1, 0.8258157579984982 
+some problem with  tof_4.qc
+@ tof_4_after_heavy, 7, 55, 0.05762271299681743, -1, -1, 0.2332085489979363 
+@ tof_4_after_light, 7, 55, 0.048080771000968525, -1, -1, 0.17129346299770987 
+some problem with  tof_4_before
+@ tof_4_pyzx.qc, 7, 65, 0.04225349999978789, -1, -1, 0.21779778699783492 
+@ tof_4_tpar.qc, 7, 102, 0.0674197810003534, -1, -1, 0.384779811000044 
+some problem with  tof_5.qc
+@ tof_5_after_heavy, 9, 75, 0.05912438499944983, -1, -1, 0.2599384830027702 
+@ tof_5_after_light, 9, 75, 0.04508170299959602, -1, -1, 0.3407866009983991 
+some problem with  tof_5_before
+@ tof_5_pyzx.qc, 9, 90, 0.041483868000796065, -1, -1, 0.2795829649985535 
+@ tof_5_tpar.qc, 9, 148, 0.37431508299778216, -1, -1, 0.6260574929983704 
+some problem with  vbe_adder_3.qc
+@ vbe_adder_3_after_heavy, 10, 89, 0.06792780400064657, -1, -1, 0.4412581320029858 
+some problem with  vbe_adder_3_after_light
+some problem with  vbe_adder_3_before
+@ vbe_adder_3_pyzx.qc, 10, 101, 0.09634919300151523, -1, -1, 0.6964493000014045 
+some problem with  vbe_adder_3_tpar.qc

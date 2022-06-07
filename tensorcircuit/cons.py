@@ -621,11 +621,13 @@ def _base(
 
             new_node = pseudo_contract_between(nodes[a], nodes[b])
         else:
+            # print("a:{} |b:{}".format(a,b))
             new_node = tn.contract_between(nodes[a], nodes[b], allow_outer_product=True)
         nodes.append(new_node)
         # nodes[a] = backend.zeros([1])
         # nodes[b] = backend.zeros([1])
         nodes = _multi_remove(nodes, [a, b])
+        # print("nodes",len(nodes))
 
         logger.debug(_sizen(new_node, is_log=True))
         total_size += _sizen(new_node)  # type: ignore
