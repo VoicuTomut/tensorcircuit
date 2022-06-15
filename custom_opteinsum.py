@@ -18,11 +18,21 @@ class MyOptimizer(oem.paths.PathOptimizer):
 
     def __call__(self, inputs, output, size_dict, memory_limit=None):
 
-        # print("inputs:",inputs)
-        # print("outputs:", output)
+        print("inputs:",inputs)
+        print("outputs:", output)
         # print("size_dic:", size_dict)
+
+        fs_inputs = [frozenset(x) for x in inputs]
+        output = frozenset(output) | frozenset.intersection(*fs_inputs)
+
+        print("fs_inputs", fs_inputs)
+        print("outputs:", output)
+
         contraction_order = [(0, 1)] * (len(inputs) - 1)
         # print("contraction_order", contraction_order)
+
+
+
         return contraction_order
 
 
@@ -44,7 +54,7 @@ def  contract_circuit(circuit_name, circuit_folder = "circuite/"):
 
     tc.set_contractor(
         "custom_stateful",
-        optimizer=MansikkaOptimizer #MyOptimizer#
+        optimizer=MansikkaOptimizer
     )
 
     #
@@ -52,17 +62,19 @@ def  contract_circuit(circuit_name, circuit_folder = "circuite/"):
 
     tic = time.perf_counter()
     opteinsum1_mat = net()
-    # print("oprteinsum_mat", opteinsum1_mat)
+    print("oprteinsum_mat", opteinsum1_mat)
     toc = time.perf_counter()
     opteinsum1_time = toc - tic
 
     # Basic greedy
-    tc.set_contractor("greedy", debug_level=2, contraction_info=False)
+    tc.set_contractor("greedy", contraction_info=False)
     tic = time.perf_counter()
     basic_mat = net()
     toc = time.perf_counter()
     basic_time = toc - tic
-    print("basic_time:", basic_time)
+    print("basic mat", basic_mat)
+    #print("basic_time:", basic_time)
+
 
 
     s = 0
@@ -71,8 +83,8 @@ def  contract_circuit(circuit_name, circuit_folder = "circuite/"):
             s=s+abs(basic_mat[i][j]-opteinsum1_mat[i][j])**2
     print("dif ", s)
 
-    # print("done")
+    print("done")
 
 
 #####
-contract_circuit(circuit_name="barenco_tof_3_after_heavy", circuit_folder = "circuite/")
+contract_circuit(circuit_name="000_test_circuit.qasm", circuit_folder = "circuite/")

@@ -2,6 +2,7 @@
 circuit networks
 """
 import copy
+from typing import List, Tuple
 
 import opt_einsum as oem
 
@@ -19,7 +20,7 @@ class MansikkaOptimizer(oem.paths.PathOptimizer):
         mansikka = MansikkaGraph(inputs,output, size_dict)
         contraction_order = get_contraction_order(mansikka, nr_tensors_to_rem=2,
                                                   nr_iter=10)  # [(0, 1)] * (len(inputs) - 1)
-        contraction_order = contraction_order_to_opt_einsum(contraction_order, inputs)
+        contraction_order = contraction_order_to_opt_einsum(contraction_order, inputs,output)
         # print("contraction_order", contraction_order)
 
         return contraction_order
@@ -49,6 +50,7 @@ class MansikkaGraph:
         # print("len dual ver:", len(dual_vert))
         self.vertices = dual_vert
         self.edges = dual_edges
+
 
     def neighbourhood(self, node):
         """
@@ -254,18 +256,47 @@ def get_contraction_order(graph, nr_tensors_to_rem, nr_iter=10):
     return contraction_order
 
 
-def contraction_order_to_opt_einsum(contraction_order, inputs):
+def contraction_order_to_opt_einsum(contraction_order, inputs, outputs):
+
+    print("inputs", inputs)
+    print("outputs", outputs)
+    print("initial contraction order:", contraction_order)
     opt_einsum_contraction = []
+
+    output_close_edges = []
     for edge in contraction_order:
         k = 0
         rm = [0, 0]
+        output_node = None
         for i, node in enumerate(inputs):
             if edge in node:
+                for out in outputs:
+                    if out in node:
+                        output_node = k,
+                        out_saved=out
                 rm[k] = i
                 k += 1
                 if k == 2:
+                    if output_node:
+                        output_close_edges.append(((rm[0], rm[1]),out_saved))
                     opt_einsum_contraction.append((rm[0], rm[1]))
                     break
+
+    reorder_output_close_edges: list[tuple[int, int]] =[]
+    for edge in outputs:
+        for pair in output_close_edges:
+            if edge in inputs[pair[0][0]]:
+                reorder_output_close_edges.append(pair)
+            elif edge in inputs[pair[0][1]]:
+                reorder_output_close_edges.append(pair)
+
+    for i in range(len(reorder_output_close_edges)):
+        edge =reorder_output_close_edges[i][0]
+        #print(edge)
+        print("output:", reorder_output_close_edges[i][1])
+        opt_einsum_contraction.append(edge)
+
+
 
     total = len(inputs)
     new_tensor = total
@@ -302,18 +333,7 @@ def contraction_order_to_opt_einsum(contraction_order, inputs):
             name_list[new_tensor] = new_tensor
             new_tensor = new_tensor + 1
             total = total - 1
-        # else:
-            # print("{} = {} ".format(valid_list[l0], valid_list[l1]))
 
-    # if(update_order[-1][0]==2):
-    #     update_order[-1]=(0,1)
-    # elif (update_order[-1][1]==2):
-    #     update_order[-1] = (0,1)
-    # elif(len(update_order)!=len(inputs)-1):
-    #     update_order.append((1,0))
-
-    # print("sh",sh)
-    # print("len updat eorder:",len(update_order))
     return update_order
 
 
